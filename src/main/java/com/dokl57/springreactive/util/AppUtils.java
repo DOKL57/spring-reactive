@@ -7,13 +7,13 @@ import org.springframework.beans.BeanUtils;
 public class AppUtils {
 
 
-    public Product dtoToEntity(ProductDto productDto){
+    public static Product dtoToEntity(ProductDto productDto){
         Product productEntity = new Product();
         BeanUtils.copyProperties(productDto, productEntity);
         return productEntity;
     }
 
-    public ProductDto entityToDto(Product productEntity){
+    public static ProductDto entityToDto(Product productEntity){
         ProductDto productDto = new ProductDto();
         BeanUtils.copyProperties(productEntity, productDto);
         return productDto;
